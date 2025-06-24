@@ -93,4 +93,7 @@ pokemon-app/
 ├── package.json
 └── README.md
 ```
-   
+
+📄 Licencia
+Este proyecto está bajo la licencia MIT.
+Puedes usarlo, copiarlo, modificarlo, compartirlo y distribuirlo libremente, incluso para fines comerciales, siempre y cuando mantengas este aviso de copyright.
