@@ -1,16 +1,47 @@
 ---
+import MainLayout from '@layouts/MainLayout.astro';
+import PokemonCard from '@components/pokemons/PokemonCard.astro';
+import Title from '@components/shared/Title.astro';
+
+import type { PokemonListResponse } from '@interfaces/pokemons-list.response';
+
+const title = 'Pokemon Static | Home';
+
+const resp = await fetch('https://pokeapi.co/api/v2/pokemon');
+const data = await resp.json() as PokemonListResponse;
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+
+<!-- <MainLayout title={title}>
+	<h1>Listado de Pokemon</h1>
+	<section 
+	aria-label="Listado de Pokemon"
+	class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-4">
+
+		{ data.results.map (( pokemon ) => {
+			const parts = pokemon.url.split("/").filter(Boolean);
+  			const id = parseInt(parts[parts.length - 1]);
+		
+		return <PokemonCard name={pokemon.name} id={id}> </PokemonCard> })}
+		
+	</section>
+</MainLayout>  -->
+
+
+<MainLayout title={title}>
+	<Title>Listado</Title>
+	<section 
+	aria-label="Listado paginado"
+	class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-5">
+
+		{ data.results.map (( pokemon ) => 
+			
+		
+		<PokemonCard id= { String(pokemon.url.split("/").at(-2)) } name={pokemon.name} url={pokemon.url}> </PokemonCard> )}
+		
+	</section>
+
+	
+</MainLayout> 

@@ -1,0 +1,50 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Title from '../../components/shared/Title.astro';
+import PokemonCard from '../../components/pokemons/PokemonCard.astro';
+import { FavoriteList } from '../../components/FavoriteList.tsx';
+
+
+---
+
+<MainLayout title="Favortios">
+    <Title>Favoritos</Title>
+    <FavoriteList client:only=""solid-js/>
+</MainLayout>
+
+
+<!-- <Counter client:load>
+    <PokemonCard id= "1" name="bulbasaur"> </PokemonCard> 
+</Counter> -->
+
+<section 
+	aria-label="Listado paginado"
+	class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-5">
+
+		<!--{ data.results.map (( pokemon ) => 
+			
+		
+		<PokemonCard id= { String(pokemon.url.split("/").at(-2)) } name={pokemon.name} url={pokemon.url}> </PokemonCard> )} -->
+		
+	</section>
+
+<script>
+     interface favoritePokemon {
+        id: string;
+        name: string;   
+    }
+
+    const handlePageLoad = () => {
+        let favoritePokemons: favoritePokemon[] = JSON.parse(localStorage.getItem('favorites') ?? '[]');
+        let valide = favoritePokemons.every(favoritePokemon => typeof favoritePokemon.name === 'string' && typeof favoritePokemon.id === 'string');
+        //console.log(valide);
+
+        favoritePokemons.forEach(function(favoritePokemon) {
+            console.log(favoritePokemon.id, favoritePokemon.name);
+        });
+    }
+
+    document.addEventListener('astro:page-load', handlePageLoad);
+
+</script>
+
