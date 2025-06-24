@@ -29,16 +29,16 @@ Aplicación construida con [Astro](https://astro.build/) v5.8.0 que muestra los 
 ## 📷 Capturas de pantalla
 
 ### 🏠 Página principal
-![Página principal](![- Pokemon Static - Home -  pokemon-astro-static netlify app](https://github.com/user-attachments/assets/3cdbfc61-64e6-462e-8f9c-3b2f762476eb))
+![Página principal](https://github.com/user-attachments/assets/3cdbfc61-64e6-462e-8f9c-3b2f762476eb)
 
 ### ⭐ Favoritos
-![Página de favoritos](![Favortios -  pokemon-astro-static netlify app](https://github.com/user-attachments/assets/03a38208-1b26-4e3d-a2b3-1836bf7ef5ab))
+![Página de favoritos](https://github.com/user-attachments/assets/03a38208-1b26-4e3d-a2b3-1836bf7ef5ab)
 
 ### 📸 Pokemon Indivial
 ![Página de Pokemon](https://github.com/user-attachments/assets/aaeedde5-4e9c-4591-8583-126fb98a114d)
 
 ### 💖 Pokémon Marcado como Favorito
-![Página de Pokemon](![Pokemon - 61 poliwhirl - Favorito - pokemon-astro-static netlify app](https://github.com/user-attachments/assets/b02a1406-413c-4c2f-a252-856622959992))
+![Página de Pokemon](https://github.com/user-attachments/assets/b02a1406-413c-4c2f-a252-856622959992)
 
 ---
 
